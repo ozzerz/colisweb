@@ -1,0 +1,15 @@
+Question 3
+
+il faudrait ajouter dans la classe "CustomResponseEntityExceptionHandler" les différents cas possible d'exceptions dans la méthode "handleAll",
+l'idée serait de tenter un ajout uniquement de l'objet Transporter (sans associer les Carriers) avec une requêtes SQL native (impossible de faire des INSERT avec JPA).
+Une fois cet ajout finis on peux tenter d'ajouter les Carriers en cas de succès il faut update le Transporter et en cas d'échec prévoir un système pour pouvoir rejouer les ajouts nécessaires. 
+
+
+Partie Amelioration
+-Ajout de regex pour l'age ,le code postal , le nom ...
+-Remplacer le SQL par NoSQL ou de l'ElasticSearch.
+-Optimisation de la requête GET (dépendant du changement de DataBase).
+-@Column(unique = true) est discutable car il ne fonctionne que si on laisse JPA crée notre base.
+-Ajout de LonBock pour rendre le code plus court
+-Ajout de log
+...
